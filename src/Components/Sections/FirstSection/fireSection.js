@@ -1,8 +1,8 @@
 import React from 'react'
 import { Typography } from '@material-ui/core';
-import '../css/firstSection.css'
+import '../../css/firstSection.css'
 import { makeStyles } from '@material-ui/core/styles';
-
+import ButtonGroup from './Buttons'
 
 const useStyles = makeStyles((theme) => ({
     TopHeading:{
@@ -34,6 +34,7 @@ const FireSection = () => {
            </Typography>
 
         </div>
+        <ButtonGroup/>
         </>
     )
 }

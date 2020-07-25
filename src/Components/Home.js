@@ -1,5 +1,5 @@
 import React from 'react'
-import FirstSection from './Sections/fireSection';
+import FirstSection from './Sections/FirstSection/fireSection';
 const Home = () => {
     return (
         <div>
