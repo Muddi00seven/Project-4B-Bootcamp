@@ -36,11 +36,10 @@ const SectionSection = () => {
            </Typography>
 
         </div>
-        <Grid container spacing={3} > 
-
-        <CardSection/>
-        </Grid>
+       
         </section>
+
+<CardSection/>
         </>
     )
 }
