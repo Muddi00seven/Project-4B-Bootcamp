@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from '@material-ui/core';
 import '../../css/secondSection.css'
 import { makeStyles } from '@material-ui/core/styles';
-
+import Card from './Cards/Card';
 const useStyles = makeStyles((theme) => ({
     TopHeading:{
         color: 'white',
@@ -34,7 +34,7 @@ const SectionSection = () => {
            </Typography>
 
         </div>
-
+        <Card/>
         </section>
         </>
     )
