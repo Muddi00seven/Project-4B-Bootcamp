@@ -2,7 +2,9 @@ import React from 'react'
 import { Typography } from '@material-ui/core';
 import '../../css/secondSection.css'
 import { makeStyles } from '@material-ui/core/styles';
-import Card from './Cards/Card';
+import CardSection from './Cards/Card';
+import {Grid} from '@material-ui/core';
+
 const useStyles = makeStyles((theme) => ({
     TopHeading:{
         color: 'white',
@@ -34,7 +36,10 @@ const SectionSection = () => {
            </Typography>
 
         </div>
-        <Card/>
+        <Grid container spacing={3} > 
+
+        <CardSection/>
+        </Grid>
         </section>
         </>
     )

@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
         width: '200px',
         height: '42x',
         fontSize: '18px',
-        transition: 'background-color 0.4s linear',
+        // transition: 'background-color 0.4s linear',
+        transition: 'border-radius  0.4s linear',
         cursor: 'pointer',
         fontFamily: '"montserrat",sans-serif',
         borderRadius: '40px',
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: '#4075c9',
             color: 'white',
+            borderRadius: '10px'
            
         },
    
