@@ -1,6 +1,7 @@
 import React from 'react'
 import BuildSection from './Build/BuildSection';
 import PointSection from './PointOfSale/PointSection'
+import CryptoSection from './CreateCryptoTokens/CryptoSection'
 const ThirdSection = () => {
     return (
         <>
@@ -9,6 +10,9 @@ const ThirdSection = () => {
         </div>
         <div>
         <PointSection/>
+        </div>
+        <div>
+            <CryptoSection/>
         </div>
         </>
     )

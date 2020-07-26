@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
-import Build from '../../../../assets/WHAT CAN YOU BUILD.png';
+import Build from '../../../../assets/WHAT CAN YOU BUILD.png'
 import '../../../css/thirdSection.css';
 
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 
 
-const NodeSection = () => {
+const BuildSection = () => {
     const classes = useStyles()
     return (
         <>
@@ -54,4 +54,4 @@ const NodeSection = () => {
     )
 }
 
-export default NodeSection
+export default BuildSection
