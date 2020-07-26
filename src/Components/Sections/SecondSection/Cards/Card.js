@@ -40,11 +40,11 @@ const CardSection = () => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          High Transaction Throughput
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Syscoin's unique Z-DAG technology means the network can handle a transaction throughput of 
+          60158 Syscoin Platform Token transactions per second (TPS), while remaining decentralised and secure.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -71,11 +71,12 @@ const CardSection = () => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          Interoperability
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Build bridges between blockchains with Syscoin Bridge,
+           interoperability with other chains has never been easier.
+
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -104,11 +105,11 @@ const CardSection = () => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          High Security
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Syscoin is merge-mined with 
+          Bitcoin which provides Syscoin with an incredibly robust and secure network.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -135,11 +136,12 @@ const CardSection = () => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          Low Fees
+
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          The fees to transact Syscoin Platform Tokens or Assets are very low, making them 
+          suited for a wide range of use cases such as point-of-sale transactions.
           </Typography>
         </CardContent>
       </CardActionArea>
