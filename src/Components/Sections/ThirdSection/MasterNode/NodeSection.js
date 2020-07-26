@@ -1,17 +1,17 @@
 import React from 'react';
 import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
-import Build from '../../../../assets/WHAT CAN YOU BUILD.png';
+import Node from '../../../../assets/masternodes1.png';
 import '../../../css/thirdSection.css';
 
 
 const useStyles = makeStyles({
     HeadingComponent: {
         color: 'white',
-        marginTop: '25%',
+        marginTop: '23%',
         width: '50%'
 
     },
-    buildSection:{
+    NodeSection:{
         marginTop: '10%',
         marginLeft: '5%',
         marginRight : '4%',
@@ -27,22 +27,23 @@ const NodeSection = () => {
     const classes = useStyles()
     return (
         <>
-        <section className={classes.buildSection}>
+        <section className={classes.NodeSection}>
             <div className="buildSection">
+            <img src={Node}/>
+
         <div className={classes.HeadingComponent}>
             <Typography variant="h2" component="h2">
-            What Can You Build?
-
+            Masternodes
             </Typography>
             <br/>            <br/>
 
             <Typography variant="h6">
-            The possibilities of what you can build on the Syscoin
-            platform are limited only by your imagination. Here are a some use cases to get your wheels turning:            </Typography>
+            Syscoin Masternodes were launched and implemented along with Syscoin 3.0 on May 1st 2018. 
+            Based on Dash code, Syscoin enhanced the masternodes to offer high transactional throughput using Z-DAG, governance issuance and seniority.
+               </Typography>
         </div>
 
     
-            <img src={Build}/>
 
         </div>
         </section>
