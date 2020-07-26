@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
@@ -49,16 +50,86 @@ const useStyles = makeStyles((theme) => ({
 
 const ButtonGroup = () => {
     const classes = useStyles();
+    
+  
+
+    const button1 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+              delay: 2000, // randomized for each tear  
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+
+    const button2 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+              delay: 2500, // randomized for each tear  
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+
+    const button3 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+              delay: 3000, // randomized for each tear  
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+
+    const button4 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+              delay: 3500, // randomized for each tear  
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+
+    const button5 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+              delay: 4000, // randomized for each tear  
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+
+
+
 
     return (
-        <div className={classes.buttonSection}>
- <Button variant="outlined" className={classes.buttons}> SUPPORT </Button>
+        <div  className={classes.buttonSection}>
+ <Button ref={button1.ref} variant="outlined" className={classes.buttons}> SUPPORT </Button>
 
-  <Button variant="outlined" className={classes.buttons} > WALLET</Button> 
-  <Button variant="outlined" className={classes.buttons}> NEWS </Button>
+  <Button  ref={button2.ref} variant="outlined" className={classes.buttons} > WALLET</Button> 
+  <Button  ref={button3.ref} variant="outlined" className={classes.buttons}> NEWS </Button>
 
-  <Button variant="outlined" className={classes.buttons} > WHITE PAPER</Button> 
-  <Button variant="outlined" className={classes.buttons}> ROAD MAP</Button>
+  <Button  ref={button4.ref} variant="outlined" className={classes.buttons} > WHITE PAPER</Button> 
+  <Button  ref={button5.ref} variant="outlined" className={classes.buttons}> ROAD MAP</Button>
 
   
         </div>

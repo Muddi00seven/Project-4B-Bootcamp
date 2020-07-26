@@ -1,11 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Card , Grid , CardActionArea, CardActions, CardContent,
-  CardMedia , Button , Typography} from '@material-ui/core';
+  CardMedia  , Typography} from '@material-ui/core';
 import Service1 from '../../../../assets/service/SERVICE IMAGE 2.png';
 import Service2 from '../../../../assets/service/SERVICE IMAGE4.png';
 import Service3 from '../../../../assets/service/SERVICE IMAGE7.png';
 import Service4 from '../../../../assets/service/SERVICE IMAGE11.png';
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 import '../../../css/secondSection.css'
 
@@ -36,6 +37,18 @@ const useStyles = makeStyles({
 const CardSection = () => {
     const classes = useStyles();
 
+    const heading1 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+
+    })
     return (
         < >
         <section >
