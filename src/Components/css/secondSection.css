@@ -6,3 +6,27 @@ margin-top: 12%;
     margin-top: 1%;
 
 }
+
+
+.AllCards{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10%;
+}
+/* .cards{
+
+} */
+
+
+.card1{
+    margin-left: 5%;
+}
+
+.card2{
+    margin-left: 35%;
+
+}
+
+.cardContent{
+    color: white;
+}

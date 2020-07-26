@@ -36,10 +36,10 @@ const SectionSection = () => {
            </Typography>
 
         </div>
-       
+        <CardSection/>
+
         </section>
 
-<CardSection/>
         </>
     )
 }

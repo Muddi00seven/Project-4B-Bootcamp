@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
 
-    // background : '#00000000',
-    backgroundColor: 'black'
+    background : '#00000000',
   },
 
   navButton : {
