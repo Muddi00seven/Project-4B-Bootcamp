@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core';
 import '../../css/secondSection.css'
 import { makeStyles } from '@material-ui/core/styles';
 import CardSection from './Cards/Card';
-import {Grid} from '@material-ui/core';
+// import {Grid} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     TopHeading:{

@@ -13,7 +13,6 @@ function App() {
     <div className="App container">
       <Navigation/>
       <Home/>
-      {/* <ThirdSection/> */}
             <Routes>
 
         {/* <Route path="/" exact component={Home} /> */}
