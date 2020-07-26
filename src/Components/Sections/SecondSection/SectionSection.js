@@ -4,6 +4,7 @@ import '../../css/secondSection.css'
 import { makeStyles } from '@material-ui/core/styles';
 import CardSection from './Cards/Card';
 // import {Grid} from '@material-ui/core';
+import useWebAnimations, { tada } from "@wellyshen/use-web-animations";
 
 const useStyles = makeStyles((theme) => ({
     TopHeading:{
@@ -18,11 +19,29 @@ const useStyles = makeStyles((theme) => ({
 }))
 const SectionSection = () => {
     const classes = useStyles();
+
+
+    const { keyframes, timing } = tada;
+    const heading1 = useWebAnimations({
+      keyframes,
+      timing: {
+        ...timing,
+        delay: 500,
+        duration: 5000,
+        iterations: 1,
+        easing: "ease-in-out",
+      },
+    });
+
+    function scrollFor() {
+        heading1.getAnimation().play(heading1);
+    }
+
     return (
         <>
-        <section>
+        <section > 
         <div className="SecondHeading">
-           <Typography variant="h2" className={classes.TopHeading}>
+           <Typography onClick={scrollFor} ref={heading1.ref} variant="h2" className={classes.TopHeading}>
            Syscoin Platform
 
            </Typography>
