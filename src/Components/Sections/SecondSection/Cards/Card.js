@@ -12,6 +12,9 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
     //   maxWidth: 345,
+    backgroundColor : '#00000000',
+    marginLeft: '5%'
+
     },
     cardContainer:{
         display : 'flex',
