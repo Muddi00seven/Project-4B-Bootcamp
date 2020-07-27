@@ -10,13 +10,17 @@ const useStyles = makeStyles({
     HeadingComponent: {
         color: 'white',
         marginTop: '10%',
-        width: '50%'
+        width: '50%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
 
     },
     PontForSale:{
         marginTop: '10%',
         marginLeft: '5%',
         marginRight : '4%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
     }
 
    

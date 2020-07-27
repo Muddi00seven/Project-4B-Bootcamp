@@ -9,6 +9,7 @@ import useWebAnimations from "@wellyshen/use-web-animations";
 const useStyles = makeStyles((theme) => ({
     TopHeading:{
         color: 'white',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
     },
     SubHeading1 : {
         marginLeft: '280px',

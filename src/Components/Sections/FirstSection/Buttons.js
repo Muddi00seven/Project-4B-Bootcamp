@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         // transition: 'background-color 0.4s linear',
         transition: 'border-radius  0.4s linear',
         cursor: 'pointer',
-        fontFamily: '"montserrat",sans-serif',
+        fontFamily: 'Tahoma, Geneva, sans-serif',
         borderRadius: '40px',
         marginBottom: '15px',
         marginLeft: '10px',

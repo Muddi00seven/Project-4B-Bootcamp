@@ -10,13 +10,17 @@ const useStyles = makeStyles({
     HeadingComponent: {
         color: 'white',
         marginTop: '25%',
-        width: '50%'
+        width: '50%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
 
     },
     CryptoSection:{
         marginTop: '10%',
         marginLeft: '5%',
         marginRight : '4%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
     },
     buttons : {
         color: 'white',
@@ -28,7 +32,7 @@ const useStyles = makeStyles({
         // transition: 'background-color 0.4s linear',
         transition: 'border-radius  0.4s linear',
         cursor: 'pointer',
-        fontFamily: '"montserrat",sans-serif',
+        fontFamily: 'Tahoma, Geneva, sans-serif',
         borderRadius: '40px',
         marginBottom: '15px',
         marginLeft: '10px',

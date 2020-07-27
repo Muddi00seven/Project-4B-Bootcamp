@@ -9,18 +9,24 @@ const useStyles = makeStyles({
     HeadingComponent: {
         color: 'white',
         marginTop: '15%',
-        width: '50%'
+        width: '50%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
 
     },
     BridgeSection:{
         marginTop: '10%',
         marginLeft: '4%',
         marginRight : '4%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
     },
     bridgePara:{
         fontSize: '18px',
         marginLeft: '4%',
         marginRight : '4%',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
     },
     bridgeImage: {
         height: '650px',

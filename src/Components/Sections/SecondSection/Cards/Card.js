@@ -24,11 +24,15 @@ const useStyles = makeStyles({
       backgroundColor : '#00000000',
       width: '350px',
       marginBottom: '10%',
+      fontFamily: 'Tahoma, Geneva, sans-serif'
+
 
 
     },
     cardContainer:{
         display : 'flex',
+        fontFamily: 'Tahoma, Geneva, sans-serif'
+
 
     },
 
