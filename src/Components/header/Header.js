@@ -8,7 +8,6 @@ import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Button } from "@material-ui/core";
-import {Link} from 'react-router-dom';
 
 
 // import { Link } from "react-router-dom";
@@ -64,8 +63,8 @@ const Header = ({ onMenuClickHandler }) => {
           <Hidden xsDown>
             <div className={classes.links}>
             {/* LINKS WILL BE PUT HERE */}
-            <Link to="Curator">   <Button className={classes.navButton}>Blogs  </Button> </Link>
-            <Link to="ListedDapps">    <Button className={classes.navButton}> About </Button> </Link>
+             <Button className={classes.navButton}>Blogs  </Button> 
+          <Button className={classes.navButton}> About </Button> 
               
             <Button className={classes.navButton} href="https://antiscamtoken.cyou/AST.pdf"> Contact </Button>
 

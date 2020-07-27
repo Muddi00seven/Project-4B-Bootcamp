@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
+import React, { useEffect } from 'react';
+import { Typography, makeStyles } from "@material-ui/core";
 import Bridge from '../../../../assets/bridge1.png'
 import '../../../css/thirdSection.css';
 import useWebAnimations from "@wellyshen/use-web-animations";
@@ -57,7 +57,7 @@ const BridgeSection = () => {
     }
     
     
-    const [scrollY,] = useState(0);
+    // const [scrollY,] = useState(0);
     
     useEffect(() => {
       function watchScroll() {

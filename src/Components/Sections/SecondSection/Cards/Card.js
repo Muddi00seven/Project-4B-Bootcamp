@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Card , Grid , CardActionArea, CardActions, CardContent,
+import {Card , Grid , CardActionArea, CardContent,
   CardMedia  , Typography} from '@material-ui/core';
 import Service1 from '../../../../assets/service/SERVICE IMAGE 2.png';
 import Service2 from '../../../../assets/service/SERVICE IMAGE4.png';
@@ -100,7 +100,7 @@ const CardSection = () => {
     }
 
 
-    const [scrollY,] = useState(0);
+    // const [scrollY,] = useState(0);
   
     useEffect(() => {
       function watchScroll() {

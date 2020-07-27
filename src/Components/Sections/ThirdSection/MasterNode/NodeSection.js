@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
+import React, {  useEffect } from 'react';
+import { Typography, makeStyles } from "@material-ui/core";
 import Node from '../../../../assets/masternodes1.png';
 import '../../../css/thirdSection.css';
 import useWebAnimations from "@wellyshen/use-web-animations";
@@ -48,7 +48,7 @@ const NodeSection = () => {
     }
     
     
-    const [scrollY,] = useState(0);
+    // const [scrollY,] = useState(0);
     
     useEffect(() => {
       function watchScroll() {
@@ -64,7 +64,7 @@ const NodeSection = () => {
         <>
         <section className={classes.NodeSection}>
             <div className="buildSection">
-            <img src={Node} ref={NodeSection.ref}/>
+            <img src={Node} alt="NodeSection" ref={NodeSection.ref}/>
 
         <div className={classes.HeadingComponent}>
             <Typography variant="h2" component="h2">

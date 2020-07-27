@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import useWebAnimations from "@wellyshen/use-web-animations";
 
-import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -40,11 +39,7 @@ const useStyles = makeStyles((theme) => ({
            
         },
    
-        ['@media(maxWidth: 480px)'] : {
-          width: '10px',
-          paddingBottom: '15px'
-        
-        }
+     
     }
   }));
 

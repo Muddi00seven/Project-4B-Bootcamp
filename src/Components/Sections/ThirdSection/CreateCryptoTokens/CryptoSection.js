@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
+import React, { useEffect } from 'react';
+import { Typography, makeStyles } from "@material-ui/core";
 import createtokens from '../../../../assets/createtokens.png'
 import '../../../css/thirdSection.css';
 import Button from '@material-ui/core/Button';
@@ -70,7 +70,7 @@ const CryptoSection = () => {
     }
     
     
-    const [scrollY,] = useState(0);
+    // const [scrollY,] = useState(0);
     
     useEffect(() => {
       function watchScroll() {

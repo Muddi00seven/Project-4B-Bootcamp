@@ -1,10 +1,10 @@
-import React, { useState, useEffect }  from 'react'
+import React  from 'react'
 import { Typography } from '@material-ui/core';
 import '../../css/secondSection.css'
 import { makeStyles } from '@material-ui/core/styles';
 import CardSection from './Cards/Card';
 // import {Grid} from '@material-ui/core';
-import useWebAnimations, { tada } from "@wellyshen/use-web-animations";
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 const useStyles = makeStyles((theme) => ({
     TopHeading:{
