@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
 import Build from '../../../../assets/WHAT CAN YOU BUILD.png'
 import '../../../css/thirdSection.css';
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 
 const useStyles = makeStyles({
@@ -21,10 +22,42 @@ const useStyles = makeStyles({
 
   });
 
-
+  
 
 const BuildSection = () => {
-    const classes = useStyles()
+    const classes = useStyles();
+    const build = useWebAnimations({
+        keyframes: {
+          transform: "translateX(15px)",
+        },
+        timing: {
+          duration: 1500, // Run for 1000ms
+          iterations: 2, // Repeat once
+          direction: "alternate", // Run the animation forwards and then backwards
+          easing: "ease-in-out", // Use a fancy timing function
+        },
+      });
+    
+      function scrollFor() {
+        build.getAnimation().play(build);
+        // card2.getAnimation().play(card2);
+        // card3.getAnimation().play(card3);
+        // card4.getAnimation().play(card4);
+    
+    }
+    
+    
+    const [scrollY,] = useState(0);
+    
+    useEffect(() => {
+      function watchScroll() {
+        window.addEventListener("scroll", scrollFor);
+      }
+      watchScroll();
+      return () => {
+        window.removeEventListener("scroll", scrollFor);
+      };
+    });
     return (
         <>
         <section className={classes.buildSection}>
@@ -42,7 +75,7 @@ const BuildSection = () => {
         </div>
 
     
-            <img src={Build}/>
+            <img src={Build} alt="build" ref={build.ref}/>
 
         </div>
         </section>

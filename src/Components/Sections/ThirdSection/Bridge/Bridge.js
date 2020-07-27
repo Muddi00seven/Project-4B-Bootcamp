@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
 import Bridge from '../../../../assets/bridge1.png'
 import '../../../css/thirdSection.css';
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 
 const useStyles = makeStyles({
@@ -34,7 +35,40 @@ const useStyles = makeStyles({
 
 
 const BridgeSection = () => {
-    const classes = useStyles()
+    const classes = useStyles();
+    const BridgeSection = useWebAnimations({
+        keyframes: {
+          transform: "translateX(15px)",
+        },
+        timing: {
+          duration: 1500, // Run for 1000ms
+          iterations: 2, // Repeat once
+          direction: "alternate", // Run the animation forwards and then backwards
+          easing: "ease-in-out", // Use a fancy timing function
+        },
+      });
+    
+      function scrollFor() {
+        BridgeSection.getAnimation().play(BridgeSection);
+        // card2.getAnimation().play(card2);
+        // card3.getAnimation().play(card3);
+        // card4.getAnimation().play(card4);
+    
+    }
+    
+    
+    const [scrollY,] = useState(0);
+    
+    useEffect(() => {
+      function watchScroll() {
+        window.addEventListener("scroll", scrollFor);
+      }
+      watchScroll();
+      return () => {
+        window.removeEventListener("scroll", scrollFor);
+      };
+    });
+
     return (
         <>
         <section className={classes.BridgeSection}>
@@ -61,7 +95,7 @@ const BridgeSection = () => {
         </div>
 
     
-            <img src={Bridge} className={classes.bridgeImage}/>
+            <img src={Bridge} alt="BridgeSection" ref={BridgeSection.ref}className={classes.bridgeImage}/>
 
         </div>
         </section>

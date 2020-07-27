@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Card , Grid , CardActionArea, CardActions, CardContent,
   CardMedia  , Typography} from '@material-ui/core';
@@ -33,11 +33,20 @@ const useStyles = makeStyles({
     },
 
   });
+
+
+
+
+
+
+
   
 const CardSection = () => {
     const classes = useStyles();
 
-    const heading1 = useWebAnimations({
+
+
+    const card1 = useWebAnimations({
       keyframes: {
         transform: "translateY(20px)",
       },
@@ -47,8 +56,69 @@ const CardSection = () => {
         direction: "alternate", // Run the animation forwards and then backwards
         easing: "ease-in-out", // Use a fancy timing function
       },
+    });
+    const card2 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+    const card3 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
+    const card4 = useWebAnimations({
+      keyframes: {
+        transform: "translateY(20px)",
+      },
+      timing: {
+        duration: 1500, // Run for 1000ms
+        iterations: 2, // Repeat once
+        direction: "alternate", // Run the animation forwards and then backwards
+        easing: "ease-in-out", // Use a fancy timing function
+      },
+    });
 
-    })
+    function scrollFor() {
+        card1.getAnimation().play(card1);
+        card2.getAnimation().play(card2);
+        card3.getAnimation().play(card3);
+        card4.getAnimation().play(card4);
+
+    }
+
+
+    const [scrollY,] = useState(0);
+  
+    useEffect(() => {
+      function watchScroll() {
+        window.addEventListener("scroll", scrollFor);
+      }
+      watchScroll();
+      return () => {
+        window.removeEventListener("scroll", scrollFor);
+      };
+    });
+
+
+
+
+
+
+
+    
     return (
         < >
         <section >
@@ -56,9 +126,10 @@ const CardSection = () => {
         <Grid  className={classes.cardContainer}>
         <div className="card1">
 
-        <Card className={classes.root}>
+        <Card  className={classes.root}>
       <CardActionArea>
         <CardMedia
+        ref={card1.ref}
           component="img"
           alt="Contemplative Reptile"
           image={Service1}
@@ -82,6 +153,7 @@ const CardSection = () => {
     <Card className={classes.root1}>
       <CardActionArea>
         <CardMedia
+        ref={card2.ref}
           component="img"
           alt="Contemplative Reptile"
           image={Service2}
@@ -110,6 +182,7 @@ const CardSection = () => {
         <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
+        ref={card3.ref}
           component="img"
           alt="Contemplative Reptile"
           image={Service3}
@@ -134,6 +207,7 @@ const CardSection = () => {
     <Card className={classes.root1}>
       <CardActionArea>
         <CardMedia
+        ref={card4.ref}
           component="img"
           alt="Contemplative Reptile"
           image={Service4}

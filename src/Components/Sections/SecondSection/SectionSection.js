@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import { Typography } from '@material-ui/core';
 import '../../css/secondSection.css'
 import { makeStyles } from '@material-ui/core/styles';
@@ -20,31 +20,32 @@ const useStyles = makeStyles((theme) => ({
 const SectionSection = () => {
     const classes = useStyles();
 
-
-    const { keyframes, timing } = tada;
     const heading1 = useWebAnimations({
-      keyframes,
-      timing: {
-        ...timing,
-        delay: 500,
-        duration: 5000,
-        iterations: 1,
-        easing: "ease-in-out",
-      },
-    });
+        keyframes: {
+          transform: "translateY(10px)",
+        },
+        timing: {
+            delay: 7000,
+          duration: 1500, // Run for 1000ms
+          iterations: 1, // Repeat once
+          direction: "reverse", // Run the animation forwards and then backwards
+          easing: "ease", // Use a fancy timing function
+        },
+      });
 
-    function scrollFor() {
-        heading1.getAnimation().play(heading1);
-    }
+
 
     return (
         <>
-        <section onScroll={scrollFor}> 
+        <section> 
         <div className="SecondHeading">
+        <div className="App">
+
            <Typography  ref={heading1.ref} variant="h2" className={classes.TopHeading}>
            Syscoin Platform
 
            </Typography>
+           </div>
 
         </div>
 
@@ -62,5 +63,31 @@ const SectionSection = () => {
         </>
     )
 }
+
+
+// const SectionSection = () => {
+//     const [scrollY, setScrollY] = useState(0);
+  
+//     function logit() {
+//       setScrollY(window.pageYOffset);
+//       console.log(new Date().getTime());
+//     }
+  
+//     useEffect(() => {
+//       function watchScroll() {
+//         window.addEventListener("scroll", logit);
+//       }
+//       watchScroll();
+//       return () => {
+//         window.removeEventListener("scroll", logit);
+//       };
+//     });
+  
+//     return (
+//       <div className="App">
+//         <div className="fixed-center">Scroll position: {scrollY}px</div>
+//       </div>
+//     );
+//   };
 
 export default SectionSection

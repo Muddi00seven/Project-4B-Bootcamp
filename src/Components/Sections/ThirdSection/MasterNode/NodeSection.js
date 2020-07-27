@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography, makeStyles, withStyles, Box } from "@material-ui/core";
 import Node from '../../../../assets/masternodes1.png';
 import '../../../css/thirdSection.css';
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 
 const useStyles = makeStyles({
@@ -24,12 +25,46 @@ const useStyles = makeStyles({
 
 
 const NodeSection = () => {
-    const classes = useStyles()
+    const classes = useStyles();
+
+    const NodeSection = useWebAnimations({
+        keyframes: {
+          transform: "translateX(15px)",
+        },
+        timing: {
+          duration: 1500, // Run for 1000ms
+          iterations: 2, // Repeat once
+          direction: "alternate", // Run the animation forwards and then backwards
+          easing: "ease-in-out", // Use a fancy timing function
+        },
+      });
+    
+      function scrollFor() {
+        NodeSection.getAnimation().play(NodeSection);
+        // card2.getAnimation().play(card2);
+        // card3.getAnimation().play(card3);
+        // card4.getAnimation().play(card4);
+    
+    }
+    
+    
+    const [scrollY,] = useState(0);
+    
+    useEffect(() => {
+      function watchScroll() {
+        window.addEventListener("scroll", scrollFor);
+      }
+      watchScroll();
+      return () => {
+        window.removeEventListener("scroll", scrollFor);
+      };
+    });
+
     return (
         <>
         <section className={classes.NodeSection}>
             <div className="buildSection">
-            <img src={Node}/>
+            <img src={Node} ref={NodeSection.ref}/>
 
         <div className={classes.HeadingComponent}>
             <Typography variant="h2" component="h2">
