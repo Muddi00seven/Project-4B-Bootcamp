@@ -39,9 +39,9 @@ const SectionSection = () => {
 
     return (
         <>
-        <section > 
+        <section onScroll={scrollFor}> 
         <div className="SecondHeading">
-           <Typography onClick={scrollFor} ref={heading1.ref} variant="h2" className={classes.TopHeading}>
+           <Typography  ref={heading1.ref} variant="h2" className={classes.TopHeading}>
            Syscoin Platform
 
            </Typography>
